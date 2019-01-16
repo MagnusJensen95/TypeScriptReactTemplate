@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import './index.css';
-import { App } from './App';
+import AppNus from './App';
 
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
@@ -9,7 +9,7 @@ import { createBrowserHistory } from 'history';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { ConnectedRouter } from "connected-react-router";
 
-import configureStore from './configureStore'
+import configureStore from './configureStore';
 
 
 const defaultTheme = createMuiTheme({
@@ -19,9 +19,9 @@ const defaultTheme = createMuiTheme({
         }
     }
 });
-let initialState = window.initialReduxState;
+const initialState = window.initialReduxState;
 const history = createBrowserHistory();
-const store = configureStore(history, initialState)
+const store = configureStore(history, initialState);
 
 
 
@@ -30,7 +30,7 @@ const app = (
         <Provider store={store}>
 
             <ConnectedRouter history={history}>
-                <App />
+                <AppNus />
             </ConnectedRouter>
 
         </Provider>

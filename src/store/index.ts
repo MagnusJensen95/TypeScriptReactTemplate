@@ -1,7 +1,7 @@
 import { combineReducers, AnyAction } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
 import { connectRouter, RouterState } from 'connected-react-router';
-import { all, fork } from 'redux-saga/effects'
+import { all } from 'redux-saga/effects'
 import {
     History
 } from 'history';
@@ -18,7 +18,7 @@ export interface ApplicationState extends LocalApplicationState {
 
 interface LocalApplicationState {
     heroes: HeroesState
-    //Reducer states
+    // Reducer states
 }
 
 
@@ -29,7 +29,7 @@ interface LocalApplicationState {
 export const rootReducer = (history: History<any>) => combineReducers<ApplicationState>({
     router: connectRouter(history),
     heroes: heroesReducer
-    //Rest of reducers
+    // Rest of reducers
 });
 
 /** Dispatcher type for any action. Please use the more precise Dispatcher whereever possible */
