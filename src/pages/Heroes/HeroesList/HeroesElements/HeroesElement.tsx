@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Hero } from 'src/store/heroes/types';
+import { Hero } from '../../../../store/heroes/types';
 
 interface OwnProps {
 

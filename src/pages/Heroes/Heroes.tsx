@@ -2,8 +2,8 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { ApplicationState, AnyActionDispatcher } from '../../store';
 import HeroesList from './HeroesList/HeroesList';
-import { Hero } from 'src/store/heroes/types';
-import { fetchRequest } from 'src/store/heroes/actions';
+import { Hero } from '../../store/heroes/types';
+import { fetchRequest } from '../../store/heroes/actions';
 
 interface OwnProps {
 
